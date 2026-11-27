@@ -5,7 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GPF Tracking — เครื่องมือติดตามและวิเคราะห์แผนการลงทุน กบข.</title>
   <link rel="icon" type="image/png" href="./favicon.png" />
-  <meta name="description" content="เช็ก NAV กบข. รายวัน ติดตามผลตอบแทน 1 สัปดาห์ ถึง 10 ปี วิเคราะห์ความเสี่ยง Max Drawdown เปรียบเทียบหลายแผน Base-100 และจำลองพอร์ตผสมแผน รองรับทั้ง iPhone และ iPad" />
+  <meta name="description" content="เช็ก NAV กบข. รายวันวันนี้ จัดอันดับผลตอบแทนแผน กบข. 1 วัน ถึง 10 ปี วิเคราะห์ความเสี่ยง Max Drawdown เปรียบเทียบหลายแผน Base-100 จำลองพอร์ตเกษียณ กบข. และคำนวณลดหย่อนภาษีออมเพิ่ม รองรับ iPhone และ iPad" />
+  <meta name="keywords" content="ราคาหน่วย กบข วันนี้, NAV กบข, แผน กบข ไหนดีสุด, เปรียบเทียบแผน กบข, คำนวณบำนาญ กบข, ออมเพิ่ม กบข ลดหย่อนภาษี, GPF Tracking" />
+  <meta property="og:title" content="GPF Tracking — เช็กราคาหน่วย NAV กบข. รายวัน & วิเคราะห์แผนการลงทุน" />
+  <meta property="og:description" content="ติดตามมูลค่าต่อหน่วย กบข. อัปเดตอัตโนมัติทุกวันทำการ เปรียบเทียบแผน จำลองพอร์ตเกษียณ และคำนวณภาษีออมเพิ่ม" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "GPF Tracking",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "iOS, iPadOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "THB"
+      },
+      "description": "Independent daily NAV tracker, multi-horizon analytics, portfolio simulator, and GPF retirement & tax calculator for Thai GPF members."
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "ราคาหน่วย กบข. (NAV/Unit) อัปเดตวันละกี่โมง?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "กบข. ประกาศมูลค่าต่อหน่วย (T+2) ในวันทำการจันทร์–ศุกร์ โดยระบบ GPF Tracking อัปเดตข้อมูลสาธารณะจาก gpf.or.th และตรวจสอบไขว้กับ gdcatalog.go.th อัตโนมัติทุกวันทำการ"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "GPF Tracking ใช้งานฟรีได้อะไรบ้าง และรุ่น Pro ฿49 ต่างกันอย่างไร?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "รุ่นฟรีดู NAV ล่าสุด กราฟ Sparkline และสูงสุด–ต่ำสุด 1 เดือน จัดอันดับ/เปรียบเทียบย้อนหลัง 1 เดือน พร้อมใช้เครื่องมือจำลองเกษียณและคำนวณลดหย่อนภาษีออมเพิ่ม กบข. ฟรี และมีสิทธิ์ทดลอง Pro ฟรี 30 วันไม่ตัดเงินอัตโนมัติ ส่วน Pro ตลอดชีพ ฿49 (จ่ายครั้งเดียว) ปลดล็อกข้อมูลย้อนหลัง 3M–10Y/ALL พอร์ตจำลอง + Rebalancing พอร์ตจริง โควตาเปลี่ยนแผน 12 ครั้ง/ปี และแจ้งเตือนราคา"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "แอป GPF Tracking ปลอดภัยและเก็บข้อมูลส่วนตัวหรือไม่?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GPF Tracking เป็นแอปวิเคราะห์อิสระ ไม่ขอเลขบัตรประชาชนหรือรหัสผ่าน กบข. และไม่เก็บข้อมูลพอร์ตหรือเงินเดือนบนเซิร์ฟเวอร์ ข้อมูลพอร์ตจริงและแผนเกษียณทั้งหมดเก็บเฉพาะในเครื่องของคุณ (Zero-PII Local-First)"
+          }
+        }
+      ]
+    }
+  </script>
   <style>
     :root {
       --navy-900: #0B1F3A;
@@ -164,8 +215,8 @@
           <p>เทียบ 2–4 แผนพร้อมกันบนจุดเริ่มต้นเท่ากัน พร้อมตารางเทียบราคาขึ้นลงรายวัน รายสัปดาห์ และรายเดือน ไฮไลต์สูงสุด–ต่ำสุดในงวดเดียวกัน (รองรับจอใหญ่ iPad)</p>
         </div>
         <div class="card">
-          <h3>6. จำลองพอร์ตและพอร์ตจริงของฉัน (Pro)</h3>
-          <p>ป้อนสัดส่วนผสมแผนเพื่อ Backtest เทียบแผนพื้นฐานทั่วไป หรือติดตามพอร์ตจริงพร้อมกราฟวงกลมแยกต้นทุน–กำไร และกราฟ/ตารางมูลค่าย้อนหลังแบบ Local-First</p>
+          <h3>6. จำลองเกษียณ ภาษี พอร์ตจริง &amp; โควตา 12 ครั้ง</h3>
+          <p>จำลองเงินก้อนเกษียณ กบข. พร้อมคำนวณลดหย่อนภาษีออมเพิ่มได้ฟรี และอัปเกรด Pro เพื่อปลดล็อก Backtest ปรับพอร์ต พอร์ตจริง (Auto-DCA/วางข้อความ) และบันทึกโควตาเปลี่ยนแผน 12 ครั้ง/ปีแบบ Local-First</p>
         </div>
       </div>
     </div>
@@ -179,9 +230,9 @@
         <div class="price-tag">฿49</div>
         <p style="font-size: 13px; color: #CBD5E1;">จ่ายครั้งเดียวผ่าน App Store / Google Play (รองรับ iPhone &amp; iPad)</p>
         <ul>
-          <li>ใช้งานฟรี: ดู NAV ล่าสุด, แถบสูงสุด–ต่ำสุด 1 เดือน, จัดอันดับ และเปรียบเทียบแผนย้อนหลังสูงสุด 1 เดือน (1D, 1W, 2W, 1M) รองรับภาษาไทย/อังกฤษ</li>
+          <li>ใช้งานฟรี: ดู NAV ล่าสุด, Sparkline &amp; สูงสุด–ต่ำสุด 1 เดือน, จัดอันดับ/เปรียบเทียบย้อนหลังสูงสุด 1 เดือน และเครื่องมือจำลองเกษียณ + คำนวณลดหย่อนภาษีออมเพิ่ม กบข.</li>
           <li>ทดลองใช้ Pro ฟรี 30 วัน (ไม่ตัดเงินอัตโนมัติ) ก่อนตัดสินใจปลดล็อก Pro ตลอดชีพ ฿49</li>
-          <li>Pro ฿49: ข้อมูลย้อนหลังเต็มช่วงเกิน 1 เดือน (3M–10Y/ALL), แถบพอร์ตครบชุด (เปรียบเทียบพอร์ตจำลอง vs พอร์ตปัจจุบัน + จำลองแนวโน้มเกษียณ กบข. + พอร์ตจริง)</li>
+          <li>Pro ฿49: ข้อมูลย้อนหลังเต็มช่วงเกิน 1 เดือน (3M–10Y/ALL), เทียบพอร์ตจำลอง + Rebalancing, พอร์ตจริง (กรอกเป็นบาท/วางข้อความ) และบันทึกโควตาเปลี่ยนแผน 12 ครั้ง/ปี</li>
           <li>Pro ฿49: แจ้งเตือนเป้าหมายมูลค่าแผน (สูงกว่า/ต่ำกว่า) และแจ้งเตือนจุดสูงสุด/ต่ำสุดรอบ 1 เดือน พร้อมวิเคราะห์ความเสี่ยง Volatility, Max Drawdown, Sharpe Ratio และ CPI</li>
           <li>ความเป็นส่วนตัว 100%: ไม่เก็บเลขบัตรประชาชนหรือรหัสผ่าน กบข. ข้อมูลพอร์ตและกฎแจ้งเตือนเก็บในเครื่องเท่านั้น</li>
         </ul>
@@ -242,7 +293,7 @@
 
           const header = el('div', 'display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;font-size:13px;');
           header.appendChild(el('strong', 'color:#0B1F3A;', `● ข้อมูลสาธารณะ กบข. (gpf.or.th) · ณ ${fmtDate(data.as_of_date)}`));
-          header.appendChild(el('span', 'color:#64748B;', 'สรุปผลตอบแทนล่าสุด (1 สัปดาห์ / 1 เดือน)'));
+          header.appendChild(el('span', 'color:#64748B;', 'สรุปผลตอบแทนล่าสุด (1 วัน / 1 สัปดาห์ / 1 เดือน & แนวโน้ม 1M)'));
 
           const tableWrap = el('div', 'overflow-x:auto;');
           const table = el('table', 'width:100%;border-collapse:collapse;font-size:13.5px;');
@@ -251,24 +302,58 @@
           headRow.appendChild(el('th', 'padding:9px 8px;text-align:left;', 'รหัส'));
           headRow.appendChild(el('th', 'padding:9px 8px;text-align:left;', 'แผนการลงทุน'));
           headRow.appendChild(el('th', 'padding:9px 8px;text-align:right;', 'NAV/หน่วย'));
+          headRow.appendChild(el('th', 'padding:9px 8px;text-align:right;', '1 วัน'));
           headRow.appendChild(el('th', 'padding:9px 8px;text-align:right;', '1 สัปดาห์'));
           headRow.appendChild(el('th', 'padding:9px 8px;text-align:right;', '1 เดือน'));
+          headRow.appendChild(el('th', 'padding:9px 8px;text-align:center;', 'แนวโน้ม 1M'));
           thead.appendChild(headRow);
           table.appendChild(thead);
+
+          const buildSparkSvg = (pts, strokeColor) => {
+            const ns = 'http://www.w3.org/2000/svg';
+            const svg = document.createElementNS(ns, 'svg');
+            svg.setAttribute('width', '64');
+            svg.setAttribute('height', '22');
+            svg.setAttribute('viewBox', '0 0 64 22');
+            if (!Array.isArray(pts) || pts.length < 2) return svg;
+            const min = Math.min(...pts);
+            const max = Math.max(...pts);
+            const span = max - min || 1;
+            const d = pts.map((v, i) => {
+              const x = (i / (pts.length - 1)) * 60 + 2;
+              const y = 20 - ((v - min) / span) * 16 - 2;
+              return `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`;
+            }).join(' ');
+            const path = document.createElementNS(ns, 'path');
+            path.setAttribute('d', d);
+            path.setAttribute('fill', 'none');
+            path.setAttribute('stroke', strokeColor);
+            path.setAttribute('stroke-width', '1.8');
+            path.setAttribute('stroke-linecap', 'round');
+            svg.appendChild(path);
+            return svg;
+          };
+
+          const pctColor = (v) => {
+            if (v === null || v === undefined || Number.isNaN(Number(v)) || Number(v) === 0) return '#64748B';
+            return Number(v) > 0 ? '#059669' : '#DC2626';
+          };
 
           const tbody = document.createElement('tbody');
           active.forEach((p) => {
             const tr = el('tr', 'border-top:1px solid #EDF1F7;');
-            const w1Color = (p.return_1w ?? 0) >= 0 ? '#059669' : '#DC2626';
             const m1Val = p.return_1m ?? p.return_2w;
-            const m1Color = (m1Val ?? 0) >= 0 ? '#059669' : '#DC2626';
             const priceText = Number.isFinite(Number(p.latest_unit_price)) ? Number(p.latest_unit_price).toFixed(4) : '-';
 
             tr.appendChild(el('td', 'padding:10px 8px;font-weight:800;color:#1E4378;', p.choice_code || '-'));
             tr.appendChild(el('td', 'padding:10px 8px;font-weight:600;', p.name_th || '-'));
             tr.appendChild(el('td', 'padding:10px 8px;text-align:right;font-weight:700;font-variant-numeric:tabular-nums;', priceText));
-            tr.appendChild(el('td', `padding:10px 8px;text-align:right;font-weight:700;color:${w1Color};font-variant-numeric:tabular-nums;`, fmtPct(p.return_1w)));
-            tr.appendChild(el('td', `padding:10px 8px;text-align:right;font-weight:800;color:${m1Color};font-variant-numeric:tabular-nums;`, fmtPct(m1Val)));
+            tr.appendChild(el('td', `padding:10px 8px;text-align:right;font-weight:700;color:${pctColor(p.return_1d)};font-variant-numeric:tabular-nums;`, fmtPct(p.return_1d)));
+            tr.appendChild(el('td', `padding:10px 8px;text-align:right;font-weight:700;color:${pctColor(p.return_1w)};font-variant-numeric:tabular-nums;`, fmtPct(p.return_1w)));
+            tr.appendChild(el('td', `padding:10px 8px;text-align:right;font-weight:800;color:${pctColor(m1Val)};font-variant-numeric:tabular-nums;`, fmtPct(m1Val)));
+            const sparkTd = el('td', 'padding:6px 8px;text-align:center;');
+            sparkTd.appendChild(buildSparkSvg(p.sparkline_1m, pctColor(m1Val)));
+            tr.appendChild(sparkTd);
             tbody.appendChild(tr);
           });
           table.appendChild(tbody);
